@@ -1,0 +1,18 @@
+.todo-item {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: bisque;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.todo-item.done {
+    background-color: lightgreen;
+}
+
+.todo-item .delete-button {
+    float: right;
+    cursor: pointer;
+}
