@@ -10,13 +10,13 @@ function ListItem({contact, onDeleteItem}) {
 
     return (
         <div className="todo-item">
-            <div> {contact.firstName}</div>
+            <div> {contact.name}</div>
 
-            <div> {contact.lastName}</div>
+            <div> {contact.username}</div>
 
             <div> {contact.phone}</div>
 
-            {(contact.id !== 1) ? <span className="delete-button" onClick={onDeleteContact}>X</span> :
+            {(contact.id !== 0) ? <span className="delete-button" onClick={onDeleteContact}>X</span> :
                 <span>     </span>}
         </div>
     );

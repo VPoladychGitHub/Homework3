@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './Form.css';
 
 function Form({onSubmitForm, onCanselForm}) {
-    const [contact, setContact] = useState({firstName: '', lastName: '', phone: ''});
+    const [contact, setContact] = useState({name: '', username: '', phone: ''});
 
     const onChangeHandler = (e) => {
         const {value, name} = e.target
@@ -25,8 +25,8 @@ function Form({onSubmitForm, onCanselForm}) {
 
     return (
         <form onSubmit={onSubmit} onCancel={formCancel}>
-            <input type='text' value={contact.firstName} name='firstName' onChange={onChangeHandler}/>
-            <input type='text' value={contact.lastName} name='lastName' onChange={onChangeHandler}/>
+            <input type='text' value={contact.name} name='name' onChange={onChangeHandler}/>
+            <input type='text' value={contact.username} name='username' onChange={onChangeHandler}/>
             <input type='text' value={contact.phone} name='phone' onChange={onChangeHandler}/>
             <button>Send</button>
             <button  onClick={formCancel}>Cancel❌</button>
